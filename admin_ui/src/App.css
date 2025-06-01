@@ -1,0 +1,386 @@
+@font-face {
+  font-family: "SatoshiLight";
+  src: url("/Satoshi-Light.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering Navbar */
+.navbar {
+  font-family:"SatoshiLight", sans-serif  ;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.07);
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+
+.logo {
+  height: 50px; /* Adjust size */
+  width: auto;
+  object-fit: contain;
+  padding-right: 50px;
+  padding-left: 10px;
+}
+
+
+.create-job {
+  background: purple;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.create-job:hover {
+  background: darkviolet;
+}
+
+/* Job Listings in 2 Columns and 4 Rows */
+.job-list {
+  display: grid;
+  margin-left: 15px;
+  margin-right: 15px;
+  grid-template-columns: repeat(4, 1fr); /* 2 columns */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  z-index: 10;
+}
+
+/* Job Card */
+.job-card {
+  background: white;
+  color: black;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;  /* Align text to the left */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.job-tag {
+  margin-top: 5px;
+  background: #68a6e8;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.job-details {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust spacing */
+}
+
+.detail-icon {
+  width: 16px; /* Adjust size */
+  height: 16px;
+}
+/* Job Description - Two Bullet Points */
+.job-description {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.job-description li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  list-style-type: disc; /* Adds bullet points */
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+.apply-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background: #0056b3;
+}
+/* Search Bar */
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  padding: 25px 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Search Inputs */
+.search-input {
+  display: flex;
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+.search-input input,
+.search-input select {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  color: black;
+}
+
+/* Align Salary Filter */
+/* Salary Filter */
+.salary-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: -30px; /* Move left */
+}
+
+.salary-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000; /* Black text */
+  margin-bottom: 5px;
+}
+
+.salary-label span {
+  color: #000; /* Ensure the range text is also black */
+}
+
+/* Salary Slider */
+.salary-slider {
+  width: 150px;
+  height: 5px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.salary-slider:hover {
+  opacity: 1;
+}
+
+.salary-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.salary-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon {
+  color: gray;
+}
+
+.divider {
+  width: 1.5px;
+  background: #ddd;
+  height: 30px;
+  margin: 0 10px;
+}
+
+
+/* form modal*/
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Higher index than job list */
+}
+
+/* Modal Content */
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1001; /* Ensures form is on top */
+}
+
+.modal-content h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+/* Form Container */
+.form-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between sections */
+}
+
+/* Row layout for inputs */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.form-group {
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 20px;
+
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Ensuring input fields are equal width */
+.form-row input,
+.form-row select {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Description should take full width */
+.description textarea {
+  background-color: white;
+  width: 100%;
+  /* padding: 10px; */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+/* Buttons - Align to bottom */
+.form-buttons {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: white;
+}
+.save-draft {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.publish {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the icon black */
+}
